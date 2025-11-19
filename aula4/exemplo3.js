@@ -1,8 +1,13 @@
 const imput = require("../input");
 
 (async () => {
-    do {
+    let num;
+    let aleatorio;
+    do { // do while é usado para executar e depois testar
         console.log("Digite um numero!");
         num = Number(await imput());
-    } while (num != 7);
+        aleatorio = Math.floor(Math.random()*10); // gerando um numero aleatorio
+        console.log("Numero sorteado: "+ aleatorio);
+    } while (num != aleatorio);
+    console.log("Acertou!!");
 })();
