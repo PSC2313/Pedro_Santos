@@ -9,4 +9,4 @@ const imput = require("../input");
             console.log("Acertou!!");
         }
     }
-})();   
+})();
