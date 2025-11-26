@@ -1,4 +1,4 @@
-const imp = require("../input");
+const {escritaLeitura} = require("../pedro");
 
 (async () => {
     let agenda = [];
@@ -7,18 +7,14 @@ const imp = require("../input");
     let telefone;
 
     for (let i = 0; i < 5 && continuar == "sim"; i++) {
-        console.log("Insira seu nome:");
-        nome = await imp();
-        console.log("Insira seu telefone:");
-        telefone = await imp();
+        nome = await escritaLeitura("Insira seu nome:");
+        telefone = await escritaLeitura("Insira seu telefone:");
 
         agenda[i] = {
             nome: nome, //chave, valor
             telefone: telefone
         };
-
-        console.log("Deseja continuar? (sim)");
-        continuar = await imp();
+        continuar = await escritaLeitura("Deseja continuar? (sim)");
     };
     console.log(agenda);
 })();

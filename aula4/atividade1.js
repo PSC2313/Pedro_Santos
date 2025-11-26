@@ -1,12 +1,11 @@
-const imput = require("../input");
+const { numAleatorio, escritaLeitura } = require("../pedro");
 
 (async () => {
     let num = 0;
     let aleatorio = -1;
-    for (i = 10; i >= 0 && num != aleatorio ; i--) {
-        console.log("Digite um numero:");
-        num = Number(await imput());
-        aleatorio = Math.floor(Math.random() * 10);
+    for (i = 10; i >= 0 && num != aleatorio; i--) {
+        num = Number(await escritaLeitura("Digite um numero:"));
+        aleatorio = numAleatorio(10);
         console.log("numero sorteado " + aleatorio);
         console.log();
         console.log(`Você tem ${i} tentativas`);
