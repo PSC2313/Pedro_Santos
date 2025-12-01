@@ -3,7 +3,7 @@ const imput = require("../input");
 (async () => {
     let num;
     let aleatorio;
-    do { // do while é usado para executar e depois testar
+    do { // executa pelomenos uma vez
         console.log("Digite um numero!");
         num = Number(await imput());
         aleatorio = Math.floor(Math.random()*10); // gerando um numero aleatorio

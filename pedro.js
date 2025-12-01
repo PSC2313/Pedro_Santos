@@ -2,7 +2,7 @@ const input = require("../input");
 
 async function escritaLeitura(msg) {
     console.log(msg);
-    return await input();;
+    return await input();
 };
 
 function numAleatorio(limite) {
